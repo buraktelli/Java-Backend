@@ -35,4 +35,42 @@ public class ProductManager implements ProductService {
 		return new SuccessResult("Urun eklendi");
 	}
 
+	@Override
+	public DataResult<Product> getByProductName(String productName) {
+		return new SuccessDataResult<Product>(this.productDao.getByProductName(productName), "Data Listelendi!");
+	}
+
+	@Override
+	public DataResult<Product> getByProductNameAndCategoryId(String productName, int categoryId) {
+		return new SuccessDataResult<Product>(this.productDao.getByProductNameAndCategoryId(productName, categoryId), "Data Listelendi!");
+
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameOrCategoryId(String productName, int categoryId) {
+		return new SuccessDataResult<List<Product>>(this.productDao.getByProductNameOrCategoryId(productName, categoryId), "Data Listelendi!");
+
+	}
+
+	@Override
+	public DataResult<List<Product>> getByCategoryIdIn(List<Integer> categories) {
+		return new SuccessDataResult<List<Product>>(this.productDao.getByCategoryIdIn(categories), "Data Listelendi!");
+
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameContains(String productName) {
+		return new SuccessDataResult<List<Product>>(this.productDao.getByProductNameContains(productName), "Data Listelendi!");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByProductNameStartsWith(String productName) {
+		return new SuccessDataResult<List<Product>>(this.productDao.getByProductNameStartsWith(productName), "Data Listelendi!");
+	}
+
+	@Override
+	public DataResult<List<Product>> getByNameAndCategoryId(String productName, int categoryId) {
+		return new SuccessDataResult<List<Product>>(this.productDao.getByNameAndCategoryId(productName, categoryId), "Data Listelendi!");
+	}
+
 }

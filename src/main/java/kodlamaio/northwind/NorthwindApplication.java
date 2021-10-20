@@ -19,7 +19,7 @@ public class NorthwindApplication {
 	
 	@Bean
     public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
+        return new Docket(DocumentationType.SWAGGER_2)
           .select()                                  
           .apis(RequestHandlerSelectors.basePackage("kodlamaio.northwind"))                                      
           .build();                                           
