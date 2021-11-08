@@ -33,6 +33,15 @@ public class ProductsController {
 		return this.productService.getAll();
 	}
 	
+	
+	
+//	@GetMapping("/getallwithcategory")
+//	public DataResult<List<Product>> getAllAsd(){
+//		return this.productService.findProductWithCategory();
+//	}
+	
+	
+	
 	@PostMapping("/add")
 	public Result add(@RequestBody Product product) {
 		return this.productService.add(product);

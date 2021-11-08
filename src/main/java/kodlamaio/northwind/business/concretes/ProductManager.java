@@ -99,8 +99,8 @@ public class ProductManager implements ProductService {
 	}
 
 //	@Override
-//	public DataResult<List<Product>> getAllWithCategory(Category category) {
-//		return new SuccessDataResult<List<Product>>(this.productDao.getAllWithCategory(category));
+//	public DataResult<List<Product>> findProductWithCategory() {
+//		return new SuccessDataResult<List<Product>>(this.productDao.findProductWithCategory(), "Data Listelendi!");
 //	}
 
 }
