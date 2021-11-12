@@ -38,7 +38,7 @@ public class Product {
 	@Column(name="units_in_stock")
 	private short unitsInStock;
 	
-	@Column(name="quantitiy_per_init")
+	@Column(name="quantity_per_unit")
 	private String quantityPerUnit;
 		
 	@ManyToOne()
